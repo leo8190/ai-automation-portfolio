@@ -1,0 +1,10 @@
+{
+  "name": "Harborline Property Services LLC",
+  "email": "quotes@harborline-demo.example",
+  "phone": "+1 (555) 010-4400",
+  "address": "400 Harbor Ave, Harborline, WA 98000",
+  "taxRate": 0.0825,
+  "quoteValidDays": 14,
+  "invoiceTermsDays": 15,
+  "quoteFollowupAfterDays": 5
+}

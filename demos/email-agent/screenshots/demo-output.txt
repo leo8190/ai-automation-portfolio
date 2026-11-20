@@ -1,0 +1,45 @@
+=== Northwind Studio — inbox triage demo ===
+All senders, companies and invoices are fictional. Classification and drafts use a deterministic mock LLM.
+
+Step 1 — Eight messages hit the inbox
+🟡 sales_lead    57%  Kevin Lee              Looking for someone to automate our membership email
+   labels: Leads/New | crm: create_lead | draft: yes
+🟡 partnership   83%  Maria Lopez            Re: partnership idea
+   labels: Partners | crm: create_lead | draft: yes
+🔴 sales_lead    83%  Rachel Green           Quote for online ordering system?
+   labels: Leads/New, Priority/High | crm: create_lead | draft: yes
+🔴 support      100%  Mark Rivera            Dispatch dashboard not loading - drivers can't see r
+   labels: Support, Priority/High | crm: log_activity | draft: yes
+🟡 billing      100%  Accounts Payable       Question about invoice INV-2026-10-003
+   labels: Billing | crm: - | draft: yes
+🟡 scheduling    86%  Tom Becker             Can we meet Thursday to review the proposal?
+   labels: Meetings | crm: log_activity | draft: yes
+⚪ spam         100%  SEO Rankings Pro       Get #1 on Google GUARANTEED!!! Limited offer
+   labels: Spam/Auto-archived | crm: - | draft: no
+🔴 complaint    100%  Dr. Sarah Kim          Very disappointed - patients got duplicate reminders
+   labels: Support, Escalations, Priority/High, Needs-Human | crm: log_activity | draft: yes  ⚠ needs human
+
+Step 2 — Tasks extracted from the mail
+  quote         —                 Prepare a quote and timeline for Peak Fitness
+  partnership   —                 Review referral partnership with Greenleaf CPA
+  quote         —                 Prepare a quote and timeline for Sunset Bakery ($3,000-$5,000)
+  support       today             Investigate: Dispatch dashboard not loading - drivers can't see routes
+  billing       —                 Send W-9 and confirm ACH for INV-2026-10-003 ($1,097.10)
+  meeting       Thursday or Friday  Schedule a call with Tom Becker (Thursday or Friday)
+  incident      today             Investigate incident and send a written summary: Very disappointed - patients got duplicate reminders
+  The SEO pitch is spam, so it produces no task and no draft.
+
+Step 3 — Approval queue (nothing is sent until a person approves)
+  M-001  to kevin@peakfitness.example             Re: Looking for someone to automate our membership emails
+  M-002  to maria@greenleafcpa.example            Re: partnership idea
+  M-003  to rachel@sunsetbakery.example           Re: Quote for online ordering system?
+  M-004  to mark@brightline.example               Re: Dispatch dashboard not loading - drivers can't see routes
+  M-005  to ap@copperleaf.example                 Re: Question about invoice INV-2026-10-003
+  M-006  to tom@beckerhvac.example                Re: Can we meet Thursday to review the proposal?
+  M-007  to sarah@acmedental.example              Re: Very disappointed - patients got duplicate reminders
+  Approved all 7 drafts. Replies are in out/outbox/. Spam was never queued.
+
+Step 4 — Running triage again does not duplicate drafts (0 new items in the queue).
+  Dr. Sarah Kim's complaint is flagged Needs-Human and still has a draft a person can approve or rewrite.
+
+Done. Report: out/triage-report.md. Tasks: out/tasks.md. Approved mail: out/outbox/. History: out/state.json.

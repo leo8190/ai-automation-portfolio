@@ -1,0 +1,15 @@
+From: Mark Rivera <mark@brightline.example>
+To: support@northwind.example
+Subject: Dispatch dashboard not loading - drivers can't see routes
+Date: Mon, 19 Oct 2026 06:45:00 -0500
+Message-ID: <002@brightline.example>
+
+Hey,
+
+Since this morning the dispatch dashboard shows a blank screen and the drivers
+can't see their routes. This is urgent, we have 14 trucks waiting. Error says
+"500 Internal Server Error" when I refresh.
+
+Can someone look at this ASAP?
+
+Mark

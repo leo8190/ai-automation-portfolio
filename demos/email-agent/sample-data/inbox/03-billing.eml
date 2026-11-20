@@ -1,0 +1,14 @@
+From: Accounts Payable <ap@copperleaf.example>
+To: billing@northwind.example
+Subject: Question about invoice INV-2026-10-003
+Date: Mon, 19 Oct 2026 10:03:00 -0400
+Message-ID: <003@copperleaf.example>
+
+Hello,
+
+We received invoice INV-2026-10-003 for $1,097.10. Could you send a W-9 and confirm
+whether you accept ACH payments? We'd like to pay before the due date.
+
+Regards,
+Jenna Walsh
+Copperleaf Realty

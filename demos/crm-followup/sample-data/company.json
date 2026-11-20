@@ -1,0 +1,5 @@
+{
+  "name": "Northwind Studio",
+  "fromEmail": "leo@northwind-demo.example",
+  "signer": "Leo"
+}

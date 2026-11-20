@@ -1,0 +1,42 @@
+[
+  {
+    "id": "REQ-001",
+    "receivedOn": "2026-11-03",
+    "fromName": "Maya Chen",
+    "fromEmail": "maya.chen@example.com",
+    "subject": "Mulch and weekly mowing quote — 18 Willow Lane",
+    "body": "Hi, we just moved into 18 Willow Lane, Harborline, WA 98000. The beds need about 12 cubic yards of mulch, and the lawn is 0.3 acres. Could we get a quote for mulch delivery and spread, plus weekly mowing? Thanks, Maya Chen, 555-0142"
+  },
+  {
+    "id": "REQ-002",
+    "receivedOn": "2026-11-03",
+    "fromName": "Jordan Blake",
+    "fromEmail": "jordan.blake@example.com",
+    "subject": "Need a fence quote",
+    "body": "Can you quote a fence for our backyard? We would like something soon. Thanks, Jordan Blake."
+  },
+  {
+    "id": "REQ-003",
+    "receivedOn": "2026-11-03",
+    "fromName": "Priya Shah",
+    "fromEmail": "priya.shah@example.com",
+    "subject": "Rooftop solar install",
+    "body": "We're at 90 Cedar Court, Harborline, WA 98000 and want a quote to install an 8 kW rooftop solar system. — Priya Shah, 555-0199"
+  },
+  {
+    "id": "REQ-004",
+    "receivedOn": "2026-11-03",
+    "fromName": "Luis Ortega",
+    "fromEmail": "luis.ortega@example.com",
+    "subject": "Cedar fence and gate",
+    "body": "Please quote 80 linear feet of cedar fence plus one cedar gate at 44 Birch Street, Harborline, WA 98000. — Luis Ortega, 555-0160"
+  },
+  {
+    "id": "REQ-005",
+    "receivedOn": "2026-11-03",
+    "fromName": "Elena Vasquez",
+    "fromEmail": "elena.vasquez@example.com",
+    "subject": "Sprinkler repair quote",
+    "body": "Our sprinklers at 7 Marina Way, Harborline, WA 98000 need a diagnosis visit and 4 replacement heads. Quote please. — Elena Vasquez, 555-0177"
+  }
+]

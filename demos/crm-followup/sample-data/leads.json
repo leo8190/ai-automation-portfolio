@@ -1,0 +1,68 @@
+[
+  {
+    "id": "LEAD-001",
+    "name": "Sarah Kim",
+    "company": "Acme Dental Group",
+    "email": "sarah@acmedental.example",
+    "stage": "New",
+    "valueUsd": 4800,
+    "source": "Website form",
+    "notes": "online booking and SMS reminders for 3 clinics",
+    "openedOn": "2026-11-03"
+  },
+  {
+    "id": "LEAD-002",
+    "name": "Mark Rivera",
+    "company": "Brightline Logistics",
+    "email": "mark@brightline.example",
+    "stage": "Contacted",
+    "valueUsd": 12000,
+    "source": "Referral",
+    "notes": "a dispatch dashboard to replace the spreadsheets",
+    "openedOn": "2026-11-03"
+  },
+  {
+    "id": "LEAD-003",
+    "name": "Jenna Walsh",
+    "company": "Copperleaf Realty",
+    "email": "jenna@copperleaf.example",
+    "stage": "New",
+    "valueUsd": 3500,
+    "source": "Upwork",
+    "notes": "a lead intake chatbot that syncs to HubSpot",
+    "openedOn": "2026-11-03"
+  },
+  {
+    "id": "LEAD-004",
+    "name": "Tom Becker",
+    "company": "Becker HVAC",
+    "email": "tom@beckerhvac.example",
+    "stage": "Proposal",
+    "valueUsd": 6200,
+    "source": "Cold email",
+    "notes": "automatic quote follow-ups for your technicians",
+    "openedOn": "2026-11-03"
+  },
+  {
+    "id": "LEAD-005",
+    "name": "Priya Shah",
+    "company": "Lumen Yoga Studios",
+    "email": "priya@lumenyoga.example",
+    "stage": "Won",
+    "valueUsd": 2900,
+    "source": "Instagram",
+    "notes": "membership renewal reminders (retainer already signed)",
+    "openedOn": "2026-11-03"
+  },
+  {
+    "id": "LEAD-006",
+    "name": "Dan Ortiz",
+    "company": "Ortiz Law PLLC",
+    "email": "dan@ortizlaw.example",
+    "stage": "Lost",
+    "valueUsd": 5000,
+    "source": "Website form",
+    "notes": "client intake forms (went with in-house IT)",
+    "openedOn": "2026-11-03"
+  }
+]

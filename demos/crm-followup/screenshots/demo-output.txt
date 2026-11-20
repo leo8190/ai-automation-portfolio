@@ -1,0 +1,43 @@
+=== Northwind Studio — CRM follow-up demo ===
+All names, companies and notes are fictional. Drafts come from a deterministic mock LLM.
+
+Step 1 — Six leads in the pipeline
+  Id         Name           Company                  Stage          Value  Source
+  LEAD-001   Sarah Kim      Acme Dental Group        New            4,800  Website form
+  LEAD-002   Mark Rivera    Brightline Logistics     Contacted     12,000  Referral
+  LEAD-003   Jenna Walsh    Copperleaf Realty        New            3,500  Upwork
+  LEAD-004   Tom Becker     Becker HVAC              Proposal       6,200  Cold email
+  LEAD-005   Priya Shah     Lumen Yoga Studios       Won            2,900  Instagram
+  LEAD-006   Dan Ortiz      Ortiz Law PLLC           Lost           5,000  Website form
+  New leads get a 4-touch sequence (intro today, bump day 2, case study day 5, break-up day 10).
+  Contacted and Proposal have their own cadences. Won and Lost get none.
+
+Step 2 — Due reminders on 2026-11-03 (opening day)
+  T-001  Sarah Kim       Intro  (drafted by mock-llm)
+  T-007  Jenna Walsh     Intro  (drafted by mock-llm)
+  Only the two New leads have a day-0 intro. Mark, Tom, Priya and Dan are not due today.
+
+Step 3 — Approval queue (nothing is sent until a person approves)
+  M-001  T-001  to sarah@acmedental.example          Quick intro — Acme Dental Group
+  M-002  T-007  to jenna@copperleaf.example          Quick intro — Copperleaf Realty
+  Approved all 2 drafts. Emails are in out/outbox/.
+
+Step 4 — Three days later, the next due reminders are drafted
+  T-002  Sarah Kim       Bump                    due 2026-11-05
+  T-005  Mark Rivera     Check-in                due 2026-11-06
+  T-008  Jenna Walsh     Bump                    due 2026-11-05
+  T-011  Tom Becker      Proposal check-in       due 2026-11-05
+
+Step 5 — Mark replies; Sarah moves to Proposal. Sequences stop or switch.
+  Mark Rivera replied — his remaining Contacted follow-up is cancelled.
+  Sarah Kim moves to Proposal — leftover New steps are cancelled, a Proposal cadence starts from today.
+  Re-running due on 2026-11-06 drafts 0 new message(s) (Sarah's proposal check-in is day 2, not yet due).
+
+Step 6 — Due again on 2026-11-08, then a second pass is a no-op
+  T-009  Jenna Walsh     Value / case study
+  T-014  Sarah Kim       Proposal check-in
+  Jenna's case-study email (New, day 5) and Sarah's proposal check-in (day 2 of the new cadence) come due.
+  Same day, second pass: 0 draft(s). Already-drafted steps are not written again.
+  Priya (Won) open tasks: 0. Dan (Lost) open tasks: 0.
+
+Done. Approved mail is in out/outbox; history is in out/state.json.

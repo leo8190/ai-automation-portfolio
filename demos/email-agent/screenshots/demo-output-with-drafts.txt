@@ -1,0 +1,71 @@
+Triage agent · engine=mock-llm · 8 emails
+
+🟡 sales_lead    57%  Kevin Lee              Looking for someone to automate our membership email
+   labels: Leads/New | crm: create_lead | draft: yes
+   Hi Kevin,
+   
+   Thanks for reaching out! This is exactly the kind of workflow I automate for small businesses. To give you an accurate quote and timeline, could we do a quick 20-minute call? I'll come prepared with a rough plan for Peak Fitness. Here's my calendar: [booking link].
+   
+   Best,
+   Leo
+
+🟡 partnership   83%  Maria Lopez            Re: partnership idea
+   labels: Partners | crm: create_lead | draft: yes
+   Hi Maria,
+   
+   Great to hear from you, and thanks for following up! I'm definitely open to a referral partnership. Could we grab 30 minutes next week to talk about the kinds of clients you see and how we'd hand off projects?
+   
+   Best,
+   Leo
+
+🔴 sales_lead    83%  Rachel Green           Quote for online ordering system?
+   labels: Leads/New, Priority/High | crm: create_lead | draft: yes
+   Hi Rachel,
+   
+   Thanks for reaching out! This is exactly the kind of workflow I automate for small businesses. To give you an accurate quote and timeline, could we do a quick 20-minute call? I'll come prepared with a rough plan for Sunset Bakery. Here's my calendar: [booking link].
+   
+   Best,
+   Leo
+
+🔴 support      100%  Mark Rivera            Dispatch dashboard not loading - drivers can't see r
+   labels: Support, Priority/High | crm: log_activity | draft: yes
+   Hi Mark,
+   
+   Thanks for flagging this — I'm on it now. I'll investigate the error and send you an update within 30 minutes, including a workaround if the fix takes longer.
+   
+   Best,
+   Leo
+
+🟡 billing      100%  Accounts Payable       Question about invoice INV-2026-10-003
+   labels: Billing | crm: - | draft: yes
+   Hi there,
+   
+   Thanks for the quick note. I've attached our W-9, and yes, we accept ACH — banking details are on the invoice (INV-2026-10-003). Let me know if your AP team needs anything else.
+   
+   Best,
+   Leo
+
+🟡 scheduling    86%  Tom Becker             Can we meet Thursday to review the proposal?
+   labels: Meetings | crm: log_activity | draft: yes
+   Hi Tom,
+   
+   Happy to walk through it together. Thursday at 2pm CT works on my side — I'll send a calendar invite with a video link. If another time is better, just pick one here: [booking link].
+   
+   Best,
+   Leo
+
+⚪ spam         100%  SEO Rankings Pro       Get #1 on Google GUARANTEED!!! Limited offer
+   labels: Spam/Auto-archived | crm: - | draft: no
+🔴 complaint    100%  Dr. Sarah Kim          Very disappointed - patients got duplicate reminders
+   labels: Support, Escalations, Priority/High, Needs-Human | crm: log_activity | draft: yes  ⚠ needs human
+   Hi Sarah,
+   
+   I'm sorry about this — you're right, that shouldn't have happened, and I understand how it reflects on your practice. I'm investigating the root cause right now and will send you a short incident summary today with what happened and the safeguard I'm adding so it doesn't repeat.
+   
+   Best,
+   Leo
+
+
+Report: out/triage-report.md
+Drafts: out/drafts (nothing is sent automatically)
+CRM:    out/crm.json

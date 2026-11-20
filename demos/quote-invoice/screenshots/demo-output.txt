@@ -1,0 +1,37 @@
+=== Harborline Property Services — quote & invoice demo ===
+All names, addresses and jobs are fictional. Prices come only from sample-data/price-sheet.csv.
+
+Step 1 — Intake five requests
+  Id       Client           Status           Detail
+  REQ-001  Maya Chen        ReadyToQuote     Ready to quote 2 line(s) at 18 Willow Lane, Harborline, WA 98000.
+  REQ-002  Jordan Blake     NeedsInfo        Missing: fence_material, fence_length_ft, site_address
+  REQ-003  Priya Shah       UnknownService   Not on the price sheet: rooftop solar install
+  REQ-004  Luis Ortega      ReadyToQuote     Ready to quote 2 line(s) at 44 Birch Street, Harborline, WA 98000.
+  REQ-005  Elena Vasquez    ReadyToQuote     Ready to quote 2 line(s) at 7 Marina Way, Harborline, WA 98000.
+
+Step 2 — Ready requests become itemized quotes (PDF)
+  Q-2026-001  Maya Chen         18 Willow Lane, Harborline, WA 98000        $1,164.77  valid until 2026-11-17
+  Q-2026-002  Luis Ortega       44 Birch Street, Harborline, WA 98000       $3,945.71  valid until 2026-11-17
+  Q-2026-003  Elena Vasquez     7 Marina Way, Harborline, WA 98000          $  281.45  valid until 2026-11-17
+
+Step 3 — Approval queue (nothing is sent until a person approves)
+  MSG-001  NeedsInfo         to jordan.blake@example.com          Re: your quote request — a couple of details (REQ-002)
+  MSG-002  UnknownService    to priya.shah@example.com            Re: rooftop solar install — not on our price sheet (REQ-003)
+  MSG-003  Quote             to maya.chen@example.com             Quote Q-2026-001 from Harborline Property Services LLC ($1,164.77)
+  MSG-004  Quote             to luis.ortega@example.com           Quote Q-2026-002 from Harborline Property Services LLC ($3,945.71)
+  MSG-005  Quote             to elena.vasquez@example.com         Quote Q-2026-003 from Harborline Property Services LLC ($281.45)
+  Approved all 5 drafts. Emails (with PDFs where relevant) are in out/outbox/.
+
+Step 4 — Elena accepts Q-2026-003; it becomes an invoice
+  INV-2026-001 for $281.45, due 2026-11-20, PDF at out/invoices/INV-2026-001.pdf
+
+Step 5 — One follow-up on the unsigned quotes, then it stops
+  On 2026-11-08: 2 follow-up(s) queued (Q-2026-001, Q-2026-002). Elena already accepted, so she is skipped.
+  On 2026-11-12: 0 follow-up(s). The rule is one reminder, then stop.
+
+Step 6 — Invoice reminders stop when payment is recorded
+  On 2026-11-17 (3 days before due): INV-2026-001 Upcoming
+  On 2026-11-20 (due date, payment was recorded on 11-18): no reminder sent
+  INV-2026-001 paid=True, last reminder=Upcoming.
+
+Done. PDFs are in out/quotes and out/invoices; approved mail is in out/outbox; history is in out/state.json.

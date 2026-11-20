@@ -1,0 +1,32 @@
+# Build
+**/bin/
+**/obj/
+**/node_modules/
+**/.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Generated demo output
+**/out/
+
+# Secrets and local config
+.env
+.env.*
+*.pem
+*.pfx
+appsettings.Development.json
+appsettings.*.local.json
+
+# Test runner artifacts
+TestResults/
+*.trx
+TEST_RESULTS.txt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

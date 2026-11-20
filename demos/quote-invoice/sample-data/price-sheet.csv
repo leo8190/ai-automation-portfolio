@@ -1,0 +1,10 @@
+sku,service,unit,unit_price_usd,notes
+MOW-WK,Weekly lawn mowing (up to 0.25 acre),visit,45.00,Quoted as the first 4 visits (one month) unless the request says otherwise
+MOW-WK-MED,Weekly lawn mowing (0.26–0.5 acre),visit,65.00,Quoted as the first 4 visits (one month) unless the request says otherwise
+MOW-WK-LG,Weekly lawn mowing (0.51–1 acre),visit,90.00,Quoted as the first 4 visits (one month) unless the request says otherwise
+MULCH-CY,Mulch delivery and spread,cubic_yard,68.00,Includes delivery within 15 miles
+TRIM-HR,Tree trimming (crew of two),hour,95.00,
+FENCE-WD,Cedar fence install,linear_foot,42.00,Posts included; gates are a separate line
+GATE-WD,Cedar gate,each,285.00,
+IRR-VISIT,Irrigation diagnosis visit,visit,120.00,
+IRR-HEAD,Irrigation head replacement,each,35.00,

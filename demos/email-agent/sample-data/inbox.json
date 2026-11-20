@@ -1,0 +1,10 @@
+[
+  {"id": "json-001", "from": "Kevin Lee <kevin@peakfitness.example>", "to": "hello@northwind.example",
+   "subject": "Looking for someone to automate our membership emails",
+   "date": "2026-10-19T12:10:00-07:00",
+   "body": "Hi, we run Peak Fitness (3 gyms in San Diego). We need to automate welcome emails, failed-payment follow-ups and win-back campaigns from our Mindbody data. Are you available next month? Happy to jump on a call.\n\nKevin Lee\nOperations Manager"},
+  {"id": "json-002", "from": "Maria Lopez <maria@greenleafcpa.example>", "to": "hello@northwind.example",
+   "subject": "Re: partnership idea",
+   "date": "2026-10-19T13:40:00-04:00",
+   "body": "Hi Leo, following up on our chat at the meetup. We are Greenleaf CPA, an accounting firm, and several of our clients ask for workflow automation. Would you be open to a referral partnership? Let me know your thoughts."}
+]
